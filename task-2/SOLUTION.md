@@ -68,7 +68,7 @@ rm part1.txt part2.txt part3.txt part4.txt
 Finally, I ran
 ```
 git add .
-git commit -m "Commit message #2"
+git commit -m "Task 2 done"
 git push origin main
 ```
 to stage, commit and push my progess to the remote repo.
