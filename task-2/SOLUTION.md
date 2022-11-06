@@ -40,7 +40,7 @@ to view the commit history and find the next answer. Using the same steps as bef
 To stage and commit my work, I used
 ```
 git add .
-git commit -m "Commit Message"
+git commit -m "3 parts done"
 ```
 I then used
 ```
