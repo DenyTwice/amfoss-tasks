@@ -10,7 +10,7 @@ I do intend to do well academically but I aim to improve my personality as well.
 
 How would you contribute back to the club?
 -------
-I hope to further the legacy of the club. Whether that's by helping to conduct events or creating innovative project. I'm quite confident that I'll be ready to do whatever is required of me, and go beyond as well. 
+I hope to further the legacy of the club. Whether that's by helping to conduct events or creating innovative projects. I'm quite confident that I'll be ready to do whatever is required of me, and go beyond as well. 
 
 Do you have any feedback for the selection process?
 -------
