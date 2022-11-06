@@ -5,10 +5,11 @@ def check(lst):
         print("YES")
     else:
         print("NO")
-journ = []
+
 for i in range(t):
     myKey = int(input())
     realmKey = list(map(int, input().split()))
+    journ = []
     journ.append(myKey)
     if realmKey[myKey-1] != 0:
         journ.append(realmKey[myKey-1])
