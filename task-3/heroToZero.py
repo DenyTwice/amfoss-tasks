@@ -18,23 +18,3 @@ for i in range(t):
             print(len(heroLvl))
         else:
             print(len(heroLvl) - zeroCnt)
-
-
-""" 
-if elements distinct:
-    if no zero:
-        make same => 1
-        make zero => 1
-        make everything else zero => len(arr) -1
-        total mana = len(arr) + 1
-    elif zero:
-        make everything else zero => len(arr) - number of zeros
-        total = > ""
-elif not distinct:
-    if no zero:
-        make zero => 1
-        make everything else zero => len(arr) - 1
-        total => len(arr)
-    elif zero:
-        make everything else zero => len(arr) - number of zeros
-"""
