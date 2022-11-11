@@ -6,8 +6,7 @@ import csv
 
 yourkey = os.getenv("APIID")
 bot_id = os.getenv("PYTELE")
-
-url = "http://www.omdbapi.com/?apikey=86c601ea&t="
+url = "http://www.omdbapi.com/?apikey=" + yourkey + "&t="
 bot = telebot.TeleBot(bot_id)
 botRunning = True
 chat_id = "5649898188"
@@ -46,13 +45,12 @@ def getMovie(message):
     json_obj = r.json()
     parsed = json.dumps(json_obj)
     data = json.loads(parsed)
-    print(data)
 
     try:
         msg = "Title: " + data['Title'] + "\nReleased: " + data['Released'] + "\nGenre: " + data['Genre'] + "\nActors: " + data['Actors'] + "\nLanguage: " + data['Language']+ "\nIMDb Rating: " + data['imdbRating']
         bot.send_photo(chat_id, data['Poster'], caption=msg)
     except KeyError:
-        bot.send(chat_id, "Could not find movie. Please try again.")
+        bot.send_document(chat_id, "Could not find movie. Please try again.")
     # TODO: 2.1 Create a CSV file and dump the movie information in it
 
     rows = [["Title:", data['Title']], ["Released ", data['Released'] + data['Year']], ["Genre: ", data['Genre']], ["Actors:", data['Actors']], ["Language:", data["Language"]], ["IMDb Rating:", data['imdbRating']]]
@@ -72,3 +70,4 @@ def default(message):
     bot.reply_to(message, 'I did not understand '+'\N{confused face}')
     
 bot.infinity_polling()
+    
