@@ -12,7 +12,7 @@ h1 {
 
 .w {
   box-shadow: 3px 3px teal;
-  background-color:  aquamarine;
+  background-color: aquamarine;
 }
 
 .a {
@@ -76,7 +76,6 @@ h1 {
   display: inline-block;
   width: 150px;
   height: 150px;
-  text-align:center;
+  text-align: center;
   margin: 10px;
-
 }
