@@ -7,7 +7,7 @@ def findSum(n):
 
 num = input()
 rounds = 0
-while int(num) != 1:
+while int(num) > 9:
     num = findSum(num)
     rounds += 1
 print(rounds)
