@@ -1,8 +1,9 @@
 numG = int(input())
 numS = list(map(int, input().split()))
+
 cars, cnt1, cnt2, cnt3, cnt4 = 0, 0, 0, 0, 0
 
-for i in range(len(numS)):
+for i in range(numG):
     if numS[i] == 1:
         cnt1 += 1
     elif numS[i] == 2:
@@ -18,7 +19,7 @@ cnt4 = 0
 #print("added", cars, "for cnt4")
 
 #  group 1 and 3 in same car
-while cnt1 > 0 and cnt3 > 0:
+while cnt1 >= 1 and cnt3 >= 1:
     cnt1 -= 1
     cnt3 -= 1
     cars += 1
@@ -34,9 +35,13 @@ if cnt2 == 1 and cnt1 >= 2:
     cnt2 = 0
     cnt1 -= 2
     #print("added", cars, "after first if")
+if cnt2 == 1 and cnt1 == 1:
+    cars += 1
+    cnt2 = 0
+    cnt1 -=1
 
 if cnt1 != 0:
-    cars += 
+    cars += cnt1//4 + 1 
     #print("added", cars, "after second")
 
 if cnt2 == 1:

@@ -60,8 +60,7 @@ def getMovie(message):
 
     except KeyError:
 
-        bot.send_document(
-            message.chat.id, "Could not find movie. Please try again.")
+        bot.send_document(message.chat.id, "Could not find movie. Please try again.")
 
     rows = [["Title:", data['Title']], ["Released ", data['Released'] + data['Year']], ["Genre: ", data['Genre']],
             ["Actors:", data['Actors']], ["Language:", data["Language"]], ["IMDb Rating:", data['imdbRating']]]
