@@ -32,6 +32,5 @@ for i in range(len(coords)):
     else:
         checkr = []
         checkrSet = set()
-
-
+        
 print(ideal)
