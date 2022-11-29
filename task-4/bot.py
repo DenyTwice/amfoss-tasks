@@ -47,25 +47,23 @@ def getMovie(message):
 
     req = requests.get(url=reqURL)
     json_obj = req.json()
-    parsed = json.dumps(json_obj)
-    data = json.loads(parsed)
-
+    
     try:
 
-        msg = "Title: " + data['Title'] + "\nReleased: " + data['Released'] + "\nGenre: " + data['Genre'] + \
-            "\nActors: " + data['Actors'] + "\nLanguage: " + \
-            data['Language'] + "\nIMDb Rating: " + data['imdbRating']
+        msg = "Title: " + json_obj['Title'] + "\nReleased: " + json_obj['Released'] + "\nGenre: " + json_obj['Genre'] + \
+            "\nActors: " + json_obj['Actors'] + "\nLanguage: " + \
+            json_obj['Language'] + "\nIMDb Rating: " + json_obj['imdbRating']
 
-        bot.send_photo(message.chat.id, data['Poster'], caption=msg)
+        bot.send_photo(message.chat.id, json_obj['Poster'], caption=msg)
 
     except KeyError:
 
-        bot.send_document(message.chat.id, "Could not find movie. Please try again.")
+        bot.send_message(message.chat.id, "Could not find movie. Please try again.")
 
-    rows = [["Title:", data['Title']], ["Released ", data['Released'] + data['Year']], ["Genre: ", data['Genre']],
-            ["Actors:", data['Actors']], ["Language:", data["Language"]], ["IMDb Rating:", data['imdbRating']]]
+    rows = [["Title:", json_obj['Title']], ["Released ", json_obj['Released'] + json_obj['Year']], ["Genre: ", json_obj['Genre']],
+            ["Actors:", json_obj['Actors']], ["Language:", json_obj["Language"]], ["IMDb Rating:", json_obj['imdbRating']]]
 
-    filename = data['Title'] + " Info.csv"
+    filename = json_obj['Title'] + " Info.csv"
 
     with open(filename, 'w') as file:
         csvwriter = csv.writer(file)
