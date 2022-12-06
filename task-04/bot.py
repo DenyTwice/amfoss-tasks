@@ -18,28 +18,26 @@ def greet(message):
     global botRunning
     botRunning = True
     bot.reply_to(
-        message, 'Hello there! I am Cassiopeia, a bot that will show movie information for you and export it in a CSV file.\n\n')
+        message, 'Hello there! I am Cassiopeia, a bot that will show movie information for you and export it in a CSV file.\n')
 
 
 @bot.message_handler(commands=['stop', 'bye'])
 def goodbye(message):
     global botRunning
     botRunning = False
-    bot.reply_to(message, 'Bye!\nHave a good time')
+    bot.reply_to(message, 'Bye!\nHave a great day!')
 
 
 @bot.message_handler(func=lambda message: botRunning, commands=['help'])
 def helpProvider(message):
-    global botRunning
-    botRunning = True
-    bot.reply_to(message, '1. You can use \"/movie MOVIE_NAME\" command to get the details of a particular movie. For eg: \"/movie Inception\"\n\n2. You can use \"/export\" command to export all the movie data in CSV format.\n\n3. You can use \"/stop\" or the command \"/bye\" to stop the bot.')
+    bot.reply_to(message, '1. You can use \"/movie MOVIE_NAME\" command to get the details of a particular movie and even '+\
+         'some TV shows. For eg: \"/movie Arcane\"\n2. You can use \"/export\" command to export all the movie data in CSV format.\n'+\
+         '3. You can use \"/stop\" or the command \"/bye\" to stop the bot.')
 
 
 @bot.message_handler(func=lambda message: botRunning, commands=['movie'])
 def getMovie(message):
-    global botRunning
     global filename
-    botRunning = True
 
     bot.reply_to(message, 'Getting movie info...')
 
@@ -58,7 +56,7 @@ def getMovie(message):
 
     except KeyError:
 
-        bot.send_message(message.chat.id, "Could not find movie. Please try again.")
+        bot.send_message(message.chat.id, "Could not find movie. Please try another query.")
 
     rows = [["Title:", json_obj['Title']], ["Released ", json_obj['Released'] + json_obj['Year']], ["Genre: ", json_obj['Genre']],
             ["Actors:", json_obj['Actors']], ["Language:", json_obj["Language"]], ["IMDb Rating:", json_obj['imdbRating']]]
