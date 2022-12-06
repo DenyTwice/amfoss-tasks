@@ -1,3 +1,4 @@
+# Terminal Hunt
 This task was pretty straightforward as well, though I did have to relearn one or two linux commands.
 
 Firstly, I had to clone the **TerminalHunt** repo by using 

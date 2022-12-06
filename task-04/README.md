@@ -1,3 +1,5 @@
+# CineBot
+
 I am a bit embarrassed by how long it took me to complete this task. I believe I should have done it in a day.
 
 Anyhow, this was a fun task to do regardless. I have some experience working with discord bots so I did not have too much trouble
