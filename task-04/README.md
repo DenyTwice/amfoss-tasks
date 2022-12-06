@@ -14,4 +14,3 @@ picture" rather than just send_photo that took caption as an argument.
 
 Working with CSV files was part of our syllabus in +2 so that was a breeze. I was also a bit suprised at how easy sending the 
 file was. I thought I'd have to upload it somewhere online temporarily, get it's URL, pass it to the bot and so on.
-
