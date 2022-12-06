@@ -1,11 +1,5 @@
 t = int(input())
 
-def check(lst):
-    if len(lst) == 3:
-        print("YES")
-    else:
-        print("NO")
-
 for i in range(t):
     myKey = int(input())
     realmKey = list(map(int, input().split()))
@@ -16,7 +10,8 @@ for i in range(t):
         nxtKey = realmKey[myKey-1]
         if realmKey[nxtKey-1] != 0:
             journ.append(realmKey[nxtKey-1])
-    check(journ)
-    
-
+    if len(journ) == 3:
+        print("YES")
+    else:
+        print("NO")
     

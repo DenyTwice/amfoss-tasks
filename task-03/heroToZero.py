@@ -1,20 +1,21 @@
 t = int(input())
+
 for i in range(t):
     numHero = int(input())
-    heroLvl = list(map(int,input().split()))
-    heroLvl.sort()
-    lvlSet = len(set(heroLvl))
+    lvls = list(map(int,input().split()))
+    lvls.sort()
+    lvlSet = set(lvls)
     zeroCnt = 0
-    for i in range(len(heroLvl)):
-        if heroLvl[i] == 0:
+    for i in range(numHero):
+        if lvls[i] == 0:
             zeroCnt += 1
-    if len(heroLvl) == lvlSet:
+    if len(lvls) == len(lvlSet):
         if zeroCnt == 0:
-            print(len(heroLvl) + 1)
+            print(len(lvls) + 1)
         else:
-            print(len(heroLvl) - zeroCnt)
+            print(len(lvls) - zeroCnt)
     else:
         if zeroCnt == 0:
-            print(len(heroLvl))
+            print(len(lvls))
         else:
-            print(len(heroLvl) - zeroCnt)
+            print(len(lvls) - zeroCnt)

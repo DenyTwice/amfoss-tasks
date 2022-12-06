@@ -1,56 +1,87 @@
-numG = int(input())
-numS = list(map(int, input().split()))
+# numG = int(input())
+# numS = list(map(int, input().split()))
 
-cars, cnt1, cnt2, cnt3, cnt4 = 0, 0, 0, 0, 0
+# cars, cnt1, cnt2, cnt3, cnt4 = 0, 0, 0, 0, 0
 
-for i in range(numG):
-    if numS[i] == 1:
-        cnt1 += 1
-    elif numS[i] == 2:
-        cnt2 += 1
-    elif numS[i] == 3:
-        cnt3 += 1
+# for i in range(numG):
+#     if numS[i] == 1:
+#         cnt1 += 1
+#     elif numS[i] == 2:
+#         cnt2 += 1
+#     elif numS[i] == 3:
+#         cnt3 += 1
+#     else:
+#         cnt4 += 1
+
+# # one car for each group 4s
+# cars += cnt4
+# cnt4 = 0
+# #print("added", cars, "for cnt4")
+
+# #  group 1 and 3 in same car
+# while cnt1 >= 1 and cnt3 >= 1:
+#     cnt1 -= 1
+#     cnt3 -= 1
+#     cars += 1
+#     #print("added", cars, "after first while")
+# # 2 group 2s in same car
+# while cnt2 >= 2:
+#     cnt2 -= 2
+#     cars += 1
+#     #print("added", cars, "after second")
+
+# if cnt2 == 1 and cnt1 >= 2:
+#     cars += 1
+#     cnt2 = 0
+#     cnt1 -= 2
+#     #print("added", cars, "after first if")
+# if cnt2 == 1 and cnt1 == 1:
+#     cars += 1
+#     cnt2 = 0
+#     cnt1 -=1
+
+# if cnt1 != 0:
+#     cars += cnt1//4 + 1 
+#     #print("added", cars, "after second")
+
+# if cnt2 == 1:
+#     cars += 1
+#     cnt2 -= 1
+#     #print(cars, "for if for two")
+
+# if cnt3 != 0:
+#     cars += cnt3
+#     #print("added ", cars, "after last")
+# #print(cnt1, cnt2, cnt3, cnt4)
+# print(cars)
+
+num = int(input())
+grp = list(map(int, input().split()))
+cars = 0
+cars += grp.count(4)
+ones = grp.count(1)
+twos = grp.count(2)
+threes = grp.count(3)
+while ones > 0 and threes > 0:
+    ones -= 1
+    threes -= 1
+    cars += 1
+while twos > 0: 
+    if twos % 2 == 0:
+        cars += (twos/2)
     else:
-        cnt4 += 1
+        cars += (twos//2)
 
-# one car for each group 4s
-cars += cnt4
-cnt4 = 0
-#print("added", cars, "for cnt4")
+if threes > 0:
+    cars += threes
 
-#  group 1 and 3 in same car
-while cnt1 >= 1 and cnt3 >= 1:
-    cnt1 -= 1
-    cnt3 -= 1
-    cars += 1
-    #print("added", cars, "after first while")
-# 2 group 2s in same car
-while cnt2 >= 2:
-    cnt2 -= 2
-    cars += 1
-    #print("added", cars, "after second")
+if ones > 0 and twos == 1:
+    cars += ones//4
+    if ones % 4 > 2:
+        cars += 2
+    elif ones % 4 <= 2:
+        cars += 1
+    
 
-if cnt2 == 1 and cnt1 >= 2:
-    cars += 1
-    cnt2 = 0
-    cnt1 -= 2
-    #print("added", cars, "after first if")
-if cnt2 == 1 and cnt1 == 1:
-    cars += 1
-    cnt2 = 0
-    cnt1 -=1
 
-if cnt1 != 0:
-    cars += cnt1//4 + 1 
-    #print("added", cars, "after second")
 
-if cnt2 == 1:
-    cars += 1
-    cnt2 -= 1
-    #print(cars, "for if for two")
-
-if cnt3 != 0:
-    cars += cnt3
-    #print("added ", cars, "after last")
-#print(cnt1, cnt2, cnt3, cnt4)
-print(cars)
