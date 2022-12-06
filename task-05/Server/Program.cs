@@ -11,7 +11,7 @@ public class SynchronousSocketListener
 
     public static void StartListening()
     {
-        // Data buffer for incoming data.  
+        // Data buffer for incoming data.
         byte[] bytes = new Byte[1024];
 
         // Establish the local endpoint for the socket.  
