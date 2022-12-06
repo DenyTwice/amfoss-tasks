@@ -6,7 +6,7 @@ I like to think I'm pretty good at managing my time, so finding time to consiste
 
 What is your plan for the next 6 months?
 -------
-I do intend to do well academically but I aim to improve my personality as well. I doubt I'll be able completely decide where and what I wish to pursue in the next six months as I think I'll still have more to learn & explore by then but hopefully I'll have a clearer picture of my future at the very least. I want to delve much deeper into the world of programming and I believe amFOSS would help me find guides as well as companions for this journey.
+I do intend to do well academically but I aim to improve my social skills as well. I doubt I'll be able completely decide where and what I wish to pursue in the next six months as I think I'll still have more to learn & explore by then but hopefully I'll have a better picture of my future at the very least. I want to delve much deeper into the world of programming and I believe amFOSS would help me find guides as well as companions for this journey.
 
 How would you contribute back to the club?
 -------
