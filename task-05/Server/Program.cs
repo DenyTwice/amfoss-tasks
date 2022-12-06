@@ -2,7 +2,7 @@
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
-// check whether all required namespaces are imported
+
 public class SynchronousSocketListener
 {
 
@@ -21,7 +21,6 @@ public class SynchronousSocketListener
         IPAddress ipAddress = ipHostInfo.AddressList[0];
         IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
 
-        // Check whether TCP Socket is created correctly
         Socket listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
         // Bind the socket to the local endpoint and
@@ -41,7 +40,7 @@ public class SynchronousSocketListener
                 data = null;
 
                 // An incoming connection needs to be processed.  
-                // check if the varibale is defined or not also even correctly defined
+
                 int bytesRec = handler.Receive(bytes);
                 data = Encoding.ASCII.GetString(bytes, 0, bytesRec);  
                 Console.WriteLine("Text received : {0}", data);
@@ -81,7 +80,6 @@ public class SynchronousSocketListener
         Console.Read();
 
     }
-    // check the main function
     public static int Main(String[] args)
     {
         StartListening();
