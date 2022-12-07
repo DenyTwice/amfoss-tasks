@@ -1,4 +1,5 @@
 t = int(input())
+
 for i in range(t):
     num = int(input())
     list1 = list(map(int, input().split()))

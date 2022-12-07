@@ -1,7 +1,7 @@
 numP = int(input())
 coords = []
 ideal = 0
-idealPoint = [1, 2, 3, 4]
+idealPoint = {1, 2, 3, 4}
 checkr = []
 
 def check(x1, x2, y1, y2):

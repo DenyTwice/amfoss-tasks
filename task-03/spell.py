@@ -1,4 +1,5 @@
 inpt = list(map(int, input().split()))
+
 lang = {}
 
 for i in range(inpt[1]):
