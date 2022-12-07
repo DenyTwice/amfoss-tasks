@@ -4,6 +4,7 @@ result = []
 if val[0] < val[1]:
     print(-1)
     exit()
+
 if val[0] == val[1]:
     print(val[0])
     exit()

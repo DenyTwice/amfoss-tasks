@@ -4,6 +4,7 @@ count = 0
 if val[1] == val[0]:
     print(0)
     exit()
+
 elif val[1] < val[0]:
     print(-1)
     exit()
@@ -16,6 +17,7 @@ while quo % 2 == 0:
 while quo % 3 == 0:
     quo /= 3
     count += 1
+    
 if quo == 1:
     print(count)
 else:

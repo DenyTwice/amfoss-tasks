@@ -23,7 +23,7 @@ for i in range(len(coords)):
         check(coords[i][0], coords[j][0], coords[i][1], coords[j][1])
 
     checkr.sort()
-    checkrSet = [*set(checkr)]
+    checkrSet = set(checkr)
 
     if checkrSet == idealPoint and len(checkrSet) == 4:
         ideal += 1
