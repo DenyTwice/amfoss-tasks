@@ -59,7 +59,7 @@ def getMovie(message):
         bot.send_message(message.chat.id, "Could not find movie. Please try another query.")
 
     rows = [["Title:", json_obj['Title']], ["Released ", json_obj['Released'] + json_obj['Year']], ["Genre: ", json_obj['Genre']],
-            ["Actors:", json_obj['Actors']], ["Language:", json_obj["Language"]], ["IMDb Rating:", json_obj['imdbRating']]]
+            ["Actors:", json_obj['Actors']], ["Language:", json_obj["Language"]], ["IMDb Rating:", json_obj['imdbRating']], ["Poster:", json_obj['Poster']]]
 
     filename = json_obj['Title'] + " Info.csv"
 
