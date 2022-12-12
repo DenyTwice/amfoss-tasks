@@ -1,6 +1,6 @@
 # amfoss-tasks
 
-## TO-DO
+## Tasks
 
 **Tasks List**|**Description**|**Status**
 --------------|---------------|---------------
