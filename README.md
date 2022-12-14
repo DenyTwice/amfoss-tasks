@@ -1,8 +1,8 @@
 # amfoss-tasks
 
-## Tasks
+## Task Progress
 
-**Tasks List**|**Description**|**Status**
+**Tasks**|**Description**|**Status**
 --------------|---------------|---------------
 [Task-00](https://github.com/DenyTwice/amfoss-tasks/tree/master/task-00)|Install Ubuntu 20.04 [Desktop]|Completed
 [Task-01](https://github.com/DenyTwice/amfoss-tasks/tree/master/task-01)|Star all the amFOSS repositories|Completed
@@ -20,3 +20,4 @@
 [Task-13]()|Footfall Counter|Have not attempted
 [Task-14]()|Bandit|Have not attempted
 [Task-15]()|Project Euler|Have not attempted
+
